@@ -1,0 +1,41 @@
+{
+  "project": "CarePath-AI",
+  "phase": 1,
+  "version": "0.1.1",
+  "verified_at_utc": "2026-11-25T10:57:43.300217+00:00",
+  "python": "3.13.5",
+  "sqlite": "3.46.1",
+  "database": "database/carepath_ai.db",
+  "database_integrity": {
+    "integrity_check": "ok",
+    "foreign_key_violations": [],
+    "schema_version": 1,
+    "table_count": 14
+  },
+  "record_counts": {
+    "staff": 4,
+    "patients": 3,
+    "appointments": 3,
+    "surveys": 3,
+    "model_registry": 1,
+    "predictions": 3,
+    "barriers": 3,
+    "interventions": 2,
+    "intervention_decisions": 2,
+    "communications": 2,
+    "transport_referrals": 1,
+    "transport_bookings": 1,
+    "audit_events": 9
+  },
+  "tests_executed": 28,
+  "tests_passed": 28,
+  "test_exit_code": 0,
+  "mode": "simulation",
+  "acceptance": "PASS",
+  "limitations": [
+    "No real patient data or external communication",
+    "Demo actor identifiers, not authentication",
+    "No trained prediction or causal models",
+    "No production or clinical validation"
+  ]
+}

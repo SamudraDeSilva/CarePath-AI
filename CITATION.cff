@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software in research, please cite this version."
+title: "CarePath-AI: A Human-Centred Causal and Agentic AI Framework for Healthcare Appointment Attendance"
+type: software
+authors:
+  - family-names: "De Silva"
+    given-names: "Samudra"
+version: "0.1.1"
+license: Apache-2.0
+keywords:
+  - healthcare appointment attendance
+  - responsible AI
+  - synthetic data
+  - Python

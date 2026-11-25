@@ -1,0 +1,58 @@
+test_analyst_write_denied (test_foundation.FoundationTests.test_analyst_write_denied) ... Database transaction rolled back: PermissionError
+ok
+test_audit_immutable (test_foundation.FoundationTests.test_audit_immutable) ... Database transaction rolled back: IntegrityError
+Database transaction rolled back: IntegrityError
+ok
+test_cancelled_appointment_sms_blocked (test_foundation.FoundationTests.test_cancelled_appointment_sms_blocked) ... Database transaction rolled back: IntegrityError
+ok
+test_config_offline (test_foundation.FoundationTests.test_config_offline) ... ok
+test_confirmation_requires_approval (test_foundation.FoundationTests.test_confirmation_requires_approval) ... Database transaction rolled back: ValueError
+ok
+test_coordinator_cannot_approve (test_foundation.FoundationTests.test_coordinator_cannot_approve) ... Database transaction rolled back: PermissionError
+Database transaction rolled back: IntegrityError
+ok
+test_cross_appointment_message (test_foundation.FoundationTests.test_cross_appointment_message) ... Database transaction rolled back: IntegrityError
+ok
+test_decision_immutable (test_foundation.FoundationTests.test_decision_immutable) ... Database transaction rolled back: IntegrityError
+ok
+test_direct_status_bypass_blocked (test_foundation.FoundationTests.test_direct_status_bypass_blocked) ... Database transaction rolled back: IntegrityError
+ok
+test_duplicate_patient (test_foundation.FoundationTests.test_duplicate_patient) ... Database transaction rolled back: IntegrityError
+ok
+test_foreign_key (test_foundation.FoundationTests.test_foreign_key) ... Database transaction rolled back: IntegrityError
+ok
+test_inactive_reviewer_denied (test_foundation.FoundationTests.test_inactive_reviewer_denied) ... Database transaction rolled back: PermissionError
+ok
+test_ineligible_booking_blocked (test_foundation.FoundationTests.test_ineligible_booking_blocked) ... Database transaction rolled back: IntegrityError
+ok
+test_integrity_and_schema (test_foundation.FoundationTests.test_integrity_and_schema) ... ok
+test_invalid_probability (test_foundation.FoundationTests.test_invalid_probability) ... Database transaction rolled back: IntegrityError
+ok
+test_late_pickup_blocked (test_foundation.FoundationTests.test_late_pickup_blocked) ... Database transaction rolled back: IntegrityError
+ok
+test_real_patient_flag_blocked (test_foundation.FoundationTests.test_real_patient_flag_blocked) ... Database transaction rolled back: IntegrityError
+ok
+test_rejected_referral_blocked (test_foundation.FoundationTests.test_rejected_referral_blocked) ... Database transaction rolled back: IntegrityError
+ok
+test_repeat_initialisation_and_seed (test_foundation.FoundationTests.test_repeat_initialisation_and_seed) ... ok
+test_sms_consent_required (test_foundation.FoundationTests.test_sms_consent_required) ... Database transaction rolled back: IntegrityError
+ok
+test_sms_idempotency (test_foundation.FoundationTests.test_sms_idempotency) ... ok
+test_sms_key_conflict (test_foundation.FoundationTests.test_sms_key_conflict) ... Database transaction rolled back: ValueError
+ok
+test_support_consent_required (test_foundation.FoundationTests.test_support_consent_required) ... Database transaction rolled back: IntegrityError
+ok
+test_transaction_rollback (test_foundation.FoundationTests.test_transaction_rollback) ... Database transaction rolled back: RuntimeError
+ok
+test_unapproved_referral_blocked (test_foundation.FoundationTests.test_unapproved_referral_blocked) ... Database transaction rolled back: IntegrityError
+ok
+test_unknown_schema_refused (test_foundation.FoundationTests.test_unknown_schema_refused) ... Database transaction rolled back: ValueError
+ok
+test_valid_journey (test_foundation.FoundationTests.test_valid_journey) ... ok
+test_withdrawn_consent_blocks_booking (test_foundation.FoundationTests.test_withdrawn_consent_blocks_booking) ... Database transaction rolled back: IntegrityError
+ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.237s
+
+OK

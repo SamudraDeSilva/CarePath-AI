@@ -1,0 +1,31 @@
+# Development and local credentials
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.json
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Generated files: supplied in release assets
+/data/**
+!/data/README.md
+/database/**
+!/database/README.md
+/models/**
+!/models/README.md
+*.db-wal
+*.db-shm
+*.db-journal
+*.zip
+/dist/
+/build/

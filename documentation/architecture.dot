@@ -1,0 +1,25 @@
+digraph architecture {
+ graph [rankdir=TB, bgcolor="white", pad=.22, nodesep=.35, ranksep=.42, fontname="DejaVu Sans", label="CAREPATH-AI | Architecture baseline v0.1.0", labelloc=t, fontsize=22];
+ node [shape=box, style="rounded,filled", fillcolor="#EAF2F8", color="#41729F", fontname="DejaVu Sans", fontsize=11, margin=".17,.11"];
+ edge [color="#64748B", fontname="DejaVu Sans", fontsize=9];
+ subgraph cluster_now { label="PHASE 1  /  Implemented foundation"; color="#168477"; style=rounded; fontname="DejaVu Sans";
+ notebook [label="Jupyter Notebook\nConfiguration • validation • demo"];
+ services [label="Python service layer\nTransactions • role assertions • audit\nApproval / consent / deduplication"];
+ db [label="SQLite  |  schema v1\n14 tables • constraints • triggers\nSynthetic records only",shape=cylinder,fillcolor="#E0F2EE",color="#168477"];
+ tests [label="Automated tests\nIntegrity and failure scenarios",fillcolor="#E0F2EE",color="#168477"];
+ notebook -> services; services -> db [dir=both]; tests -> services [style=dashed];
+ {rank=same;services;tests;}
+ }
+ subgraph cluster_future { label="PHASES 2–12  /  Planned extensions, not implemented"; color="#94A3B8"; style="rounded,dashed"; fontname="DejaVu Sans";
+ node [style="rounded,dashed,filled", fillcolor="#F5F5F5", color="#94A3B8"];
+ data [label="Data engineering & survey"];
+ ml [label="Prediction + explanations"];
+ chat [label="SMS + barrier chatbot"];
+ causal [label="Causal intervention estimates"];
+ agent [label="Agent orchestration"];
+ staff [label="Staff dashboard\nHuman review & approval"];
+ transport [label="Transport provider adapter\nSimulation only by default"];
+ data -> ml -> chat -> causal -> agent -> staff -> transport;
+ }
+ services -> data [style=dashed,label="future interfaces"]; staff -> services [style=dashed,constraint=false,label="approval via service"];
+}

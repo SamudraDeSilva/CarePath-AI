@@ -1,0 +1,9 @@
+{
+  "project": "CarePath-AI",
+  "version": "0.1.1",
+  "mode": "simulation",
+  "database": "database/carepath_ai.db",
+  "timezone": "UTC",
+  "allow_external_calls": false,
+  "allow_real_patient_data": false
+}

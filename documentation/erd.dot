@@ -1,0 +1,32 @@
+digraph erd {
+graph [rankdir=LR, bgcolor="white", pad=.2, nodesep=.3, ranksep=.75, fontname="DejaVu Sans", label="CAREPATH-AI | Entity relationship diagram · schema v1", labelloc=t, fontsize=22];
+node [shape=record, style=filled, fillcolor="#EAF2F8", color="#41729F", fontname="DejaVu Sans", fontsize=10];
+edge [color="#64748B", fontname="DejaVu Sans", fontsize=9];
+schema_version [label="{schema_version|PK version\l}"];
+staff [label="{staff|PK staff_id\lrole, active\l}"];
+patients [label="{patients|PK patient_id\lage_band, sms_opt_in\lcontact_ref, is_synthetic\l}"];
+appointments [label="{appointments|PK appointment_id\lFK patient_id\lscheduled_at, status\l}"];
+surveys [label="{surveys|PK survey_id\lFK appointment_id\lbarriers, support_consent\l}"];
+model_registry [label="{model_registry|PK model_id\lkind, version, validation\l}"];
+predictions [label="{predictions|PK prediction_id\lFK appointment_id\lFK model_id\lprobability, explanation\l}"];
+barriers [label="{barriers|PK barrier_id\lFK appointment_id\lcategory, source\l}"];
+interventions [label="{interventions|PK intervention_id\lFK appointment_id\lkind, status, benefit\l}"];
+intervention_decisions [label="{intervention_decisions|PK decision_id\lFK intervention_id (unique)\lFK staff_id\ldecision, reason\l}"];
+communications [label="{communications|PK message_id\lFK appointment_id\lFK intervention_id (optional)\ldedupe_key (unique)\l}"];
+transport_referrals [label="{transport_referrals|PK referral_id\lFK intervention_id (unique)\leligibility, status\l}"];
+transport_bookings [label="{transport_bookings|PK booking_id\lFK referral_id (unique)\lprovider, pickup, status\l}"];
+audit_events [label="{audit_events|PK event_id\lFK actor_id (optional)\laction, entity_id, details\l}"];
+patients -> appointments [label="1 : N"];
+appointments -> surveys [label="1 : N"];
+appointments -> predictions [label="1 : N"];
+model_registry -> predictions [label="1 : N"];
+appointments -> barriers [label="1 : N"];
+appointments -> interventions [label="1 : N"];
+appointments -> communications [label="1 : N"];
+staff -> intervention_decisions [label="1 : N"];
+staff -> audit_events [label="1 : N"];
+interventions -> intervention_decisions [label="1 : 0..1"];
+interventions -> communications [label="1 : N (optional FK)"];
+interventions -> transport_referrals [label="1 : 0..1"];
+transport_referrals -> transport_bookings [label="1 : 0..1"];
+}
