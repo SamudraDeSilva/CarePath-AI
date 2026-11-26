@@ -1,6 +1,13 @@
-# Runtime: Python 3.10+ with SQLite JSON functions (Python 3.11+ recommended).
+# Runtime: Python 3.11-3.13 with SQLite JSON functions.
 # Core service and automated tests use only the standard library.
 notebook>=7,<8
 ipykernel>=6,<8
 nbformat>=5.9,<6
 nbclient>=0.9,<1
+# Phase 2: versions used in verification; Python 3.11-3.13 recommended.
+numpy==2.3.5
+pandas==2.2.3
+scikit-learn==1.8.0
+matplotlib>=3.9,<4
+joblib>=1.4,<2
+ipywidgets>=8.1,<9

@@ -29,3 +29,12 @@ Thumbs.db
 *.zip
 /dist/
 /build/
+
+# Internal publication and packaging files
+/PUBLISHING.md
+/documentation/original_file_manifest.json
+/documentation/packaging_verification.txt
+/documentation/phase1_README.md
+/documentation/phase2_README.md
+/documentation/public_revision_regression.txt
+/documentation/public_revision_verification.json

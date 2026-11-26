@@ -1,0 +1,5 @@
+outcome,count,share
+attended,37286,0.74572
+no_show,8390,0.1678
+cancelled,2790,0.0558
+rescheduled,1534,0.03068

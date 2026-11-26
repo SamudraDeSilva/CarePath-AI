@@ -1,0 +1,152 @@
+{
+  "release": "0.2.0",
+  "status": "PASS",
+  "verified_at_utc": "2026-11-25T11:16:21.778849+00:00",
+  "seed": 20261125,
+  "synthetic_only": true,
+  "appointments": 50000,
+  "patients": 12500,
+  "active_cohort": 45676,
+  "no_show_rate_active": 0.18368508625974253,
+  "survey_response_count": 40052,
+  "survey_response_rate": 0.80104,
+  "outcome_counts": {
+    "attended": 37286,
+    "no_show": 8390,
+    "cancelled": 2790,
+    "rescheduled": 1534
+  },
+  "splits": [
+    {
+      "split": "train",
+      "rows": 30853,
+      "patients": 11937,
+      "start": "2022-12-31T08:00:00Z",
+      "end": "2025-01-01T16:30:00Z",
+      "no_show_rate": 0.17930185071143812
+    },
+    {
+      "split": "validation",
+      "rows": 7501,
+      "patients": 5822,
+      "start": "2025-01-04T08:00:00Z",
+      "end": "2025-07-02T16:30:00Z",
+      "no_show_rate": 0.19290761231835754
+    },
+    {
+      "split": "test",
+      "rows": 7322,
+      "patients": 5739,
+      "start": "2025-07-05T08:00:00Z",
+      "end": "2025-12-24T16:30:00Z",
+      "no_show_rate": 0.19270691068014204
+    }
+  ],
+  "patient_overlap": {
+    "train_validation": 5424,
+    "train_test": 5351,
+    "validation_test": 2499
+  },
+  "data_checks": {
+    "exactly_50000": true,
+    "unique_appointments": true,
+    "12500_patients": true,
+    "valid_patient_appointment_counts": true,
+    "no_real_identifiers": true,
+    "valid_dispositions": true,
+    "binary_target_only_active": true,
+    "competing_dispositions_excluded": true,
+    "survey_missingness_preserved": true,
+    "survey_timestamps_pre_index": true,
+    "booking_pre_index": true,
+    "index_pre_appointment": true,
+    "survey_confidence_range": true,
+    "survey_flags_binary": true,
+    "patient_history_exact": true,
+    "prior_outcomes_available": true,
+    "strict_temporal_splits": true,
+    "training_labels_available_before_next_split": true,
+    "split_exhaustiveness": true,
+    "feature_allowlist_no_leakage": true,
+    "oracle_alignment": true,
+    "oracle_probabilities_valid": true,
+    "propensity_overlap": true,
+    "oracle_missing_for_inactive": true,
+    "all_arms_observed": true,
+    "no_future_oracle_in_features": true
+  },
+  "database_checks": {
+    "database_integrity": true,
+    "foreign_keys_clean": true,
+    "schema_extension_tables": true,
+    "research_appointment_count": true,
+    "research_patient_count": true,
+    "survey_count_matches": true,
+    "research_data_roundtrip": true,
+    "oracle_roundtrip": true,
+    "no_live_research_actions": true,
+    "manifest_hashes_match": true
+  },
+  "database_table_counts": {
+    "patients": 12503,
+    "appointments": 50003,
+    "surveys": 40055,
+    "barriers": 41044,
+    "research_runs": 1,
+    "research_appointments": 50000,
+    "research_oracle": 50000,
+    "interventions": 2,
+    "communications": 2
+  },
+  "dataset_sha256": "0ee4f019f02df0dc257a4f364197fca7448ed9c5c04faff5bf08d42f73739a2e",
+  "oracle_sha256": "bf6e80e8a194fa128d5836d135e6e66ecb5708f64de29fcfbb72a394f2e696ec",
+  "preprocessing_shapes": {
+    "baseline": {
+      "train": [
+        30853,
+        33
+      ],
+      "validation": [
+        7501,
+        33
+      ],
+      "test": [
+        7322,
+        33
+      ]
+    },
+    "survey": {
+      "train": [
+        30853,
+        50
+      ],
+      "validation": [
+        7501,
+        50
+      ],
+      "test": [
+        7322,
+        50
+      ]
+    }
+  },
+  "tests_passed": 47,
+  "tests_failed": 0,
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "sqlite": "3.46.1",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "joblib": "1.5.3"
+  },
+  "limitations": [
+    "Synthetic data and invented intervention effects only",
+    "No trained predictive model",
+    "No real NHS integration, authentication or clinical validation",
+    "Widget UI not verified in build environment; editable form and backend verified",
+    "Windows not directly tested"
+  ]
+}
